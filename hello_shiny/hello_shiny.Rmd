@@ -42,12 +42,7 @@ urlcolor: red
 citecolor: Black1
 ---
 
-```{r gobal_options, child = "document_setting.Rmd", eval=TRUE}
-```
-
-```{r using_pkg, eval=TRUE}
-library("shiny")
-library("webshot")
+```{r gobal_options, child = "document_setting.Rmd", eval = TRUE}
 ```
 
 ---
@@ -56,13 +51,14 @@ library("webshot")
 
 ---
 
-## ディレクトリを作る
+## Shinyを動かすためのディレクトリ
 
 * \faFolderOpen App_name/
     * \faFile \textbf{server.R} （必須）
     * \faFile \textbf{ui.R} （必須）
+    * \faFile global.R （なくても良い）
     * \faFolderClose www/ （なくても良い）
-        * 画像, CSS, Javescriptなどは「www」という名前のフォルダに入れること
+        * 画像, CSS, Javescriptなどは「www」というフォルダの中へ
         
 ## 実際にはこんな感じ
 
@@ -84,15 +80,13 @@ webshot(url = "https://github.com/rstudio/shiny-examples/blob/master/001-hello/u
 
 ![](images/code_ui.r.png)
 
-```{r, echo=TRUE}
-shinyUI(fluidPage(
-  
-))
+```{r, echo=TRUE, size="tiny"}
+shinyUI(fluidPage())
 ```
 
 ## \large{server.R... 動作、機能を定義}
 
-```{r}
+```{r, eval=FALSE}
 webshot(url = "https://github.com/rstudio/shiny-examples/blob/master/001-hello/server.R",
         file = "hello_shiny/images/code_server.r.png",
         selector = "table") %>% resize("1200x")

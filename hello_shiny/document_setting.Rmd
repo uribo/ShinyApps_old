@@ -31,4 +31,8 @@ library("ggthemr") # https://github.com/cttobin/ggthemr
 cite_options(max.names = 1)
 ### ggthemr's theme ###
 ggthemr("dust")
+
+### using package ###
+library("shiny")
+library("webshot")
 ```
