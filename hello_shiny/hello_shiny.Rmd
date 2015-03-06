@@ -1,0 +1,138 @@
+---
+# Lab.note package ver. 0.4.2
+title: Hello, Shiny!
+subtitle: 
+author: \faTwitter @u_ribo
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+header-includes:
+# define macro
+    - \definecolor{Black1}{RGB}{43,40,40}
+    - \definecolor{White1}{RGB}{255, 255, 250}
+    - \definecolor{Blue1}{RGB}{48, 122, 190} \definecolor{Blue2}{RGB}{99, 151, 205}
+    - \definecolor{Grey1}{RGB}{164, 173, 185}
+# using package, setup
+    - \usepackage{zxjatype}
+    - \setjamainfont{Hiragino Kaku Gothic Pro}
+    - \usepackage{fontspec, fontawesome} # require installed FontAwesome
+    - \usepackage{scrextend}
+    - \changefontsizes{22pt}
+## comment out when if you using image for slide background 
+#   - \usebackgroundtemplate{\includegraphics[width = \paperwidth, height = \paperheight]{...png}}
+# set beamer theme
+    - \setbeamercolor{background canvas}{bg = White1}
+    - \setbeamertemplate{navigation symbols}{}
+    - \setbeamertemplate{itemize items}{\textcolor{Blue2}{\faCaretRight}}
+    - \setbeamerfont{title}{size = \fontsize{38}{10}} \setbeamercolor{title}{fg = Blue1}
+    - \setbeamerfont{subtitle}{size = \large} \setbeamercolor{subtitle}{fg = Blue2}
+    - \setbeamercolor{author}{fg = Black1} \setbeamercolor{normal text}{fg = Black1}
+    - \setbeamerfont{date}{series = \itshape} \setbeamercolor{date}{fg = Grey1}
+    - \setbeamercolor{frametitle}{fg = Blue1}
+# new command
+    - \renewcommand{\baselinestretch}{1.0}
+output:
+  beamer_presentation:
+    fonttheme: "structurebold"
+    keep_tex: false
+    pandoc_args:
+     ["--latex-engine=xelatex"]
+mainfont: Helvetica Neue
+monofont: Ricty
+linkcolor: blue
+urlcolor: red
+citecolor: Black1
+---
+
+```{r gobal_options, child = "document_setting.Rmd", eval=TRUE}
+```
+
+```{r using_pkg, eval=TRUE}
+library("shiny")
+library("webshot")
+```
+
+---
+
+\center{Shinyを動かそう}
+
+---
+
+## ディレクトリを作る
+
+* \faFolderOpen App_name/
+    * \faFile \textbf{server.R} （必須）
+    * \faFile \textbf{ui.R} （必須）
+    * \faFolderClose www/ （なくても良い）
+        * 画像, CSS, Javescriptなどは「www」という名前のフォルダに入れること
+        
+## 実際にはこんな感じ
+
+```{r, echo=TRUE}
+runExample("01_hello")
+```
+
+![](images/001-hello.png)
+
+\scriptsize{\faLink \url{https://github.com/rstudio/shiny-examples/tree/master/001-hello}}
+
+## \large{ui.R... 外観、構造を定義}
+
+```{r, eval=FALSE}
+webshot(url = "https://github.com/rstudio/shiny-examples/blob/master/001-hello/ui.R",
+        file = "hello_shiny/images/code_ui.r.png",
+        selector = "table") %>% resize("1200x")
+```
+
+![](images/code_ui.r.png)
+
+```{r, echo=TRUE}
+shinyUI(fluidPage(
+  
+))
+```
+
+## \large{server.R... 動作、機能を定義}
+
+```{r}
+webshot(url = "https://github.com/rstudio/shiny-examples/blob/master/001-hello/server.R",
+        file = "hello_shiny/images/code_server.r.png",
+        selector = "table") %>% resize("1200x")
+```
+
+![](images/code_server.r.png)
+
+```{r, echo=TRUE}
+shinyServer(function(input, output) {
+})
+```
+
+## 複雑...
+
+> shinyUI fluidPage
+
+
+
+## Check font size
+
+\center{
+  Default 22 pt\\(see line 18 in this file)
+  
+  \begin{itemize}
+    \item \small{small}
+    \item \footnotesize{footnotesize}
+    \item \scriptsize{scriptsize}
+    \item \tiny{tiny}
+  \end{itemize}
+}
+
+## Check font size
+
+\center{
+  Default 22 pt\\(see line 18 in this file)
+  
+  \begin{itemize}
+    \item \Large{Large}, \LARGE{LARGE}
+    \item \huge{huge}, \Huge{Huge}
+  \end{itemize}
+}
+
+## References
