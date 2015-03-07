@@ -99,6 +99,39 @@ shinyServer(function(input, output) {
 })
 ```
 
+## server.R
+
+* input... 変数名はui.Rで使用するラベル名となる
+* **output$**hoge... hoge
+    * hogeはui.Rでの出力部で使うラベル
+    
+## タブ化する
+
+ui.R
+
+```{r, echo=TRUE}
+mainPanel(
+  tableOutput("view"),
+  plotOutput("plot")
+)
+```
+
+こうする（下）
+
+```{r, echo=TRUE}
+mainPanel(
+  tabsetPanel(
+    tabPanel("Tab name", tableOutput("view")),
+    tabPanel("Size class", plotOutput("plot"))
+  )
+)
+```
+
+## Tips
+
+* Themeを適用... http://rstudio.github.io/shinythemes/
+
+
 ## 複雑...
 
 > shinyUI fluidPage
