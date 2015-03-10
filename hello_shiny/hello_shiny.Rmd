@@ -127,6 +127,17 @@ mainPanel(
 )
 ```
 
+## shinydashboard
+
+[shinydashboard](http://rstudio.github.io/shinydashboard/index.html)は気軽にShinyを動かせるダッシュボード形式のパッケージ。ShinyAppとは構造が異なるので注意
+
+## 構造
+
+ShinyApp同様、一つのファイル内に処理を書けるが、別々なファイルにすることも可能。
+
+* ui.R
+* app.R
+
 ## Tips
 
 * Themeを適用... http://rstudio.github.io/shinythemes/
