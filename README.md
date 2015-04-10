@@ -20,3 +20,5 @@
 | - | joebrew | [ShinyApps](https://github.com/joebrew/ShinyApps) |
 | [Finnish Breeding Bird Atlas](https://ttso.shinyapps.io/lintuatlas/) | ttso | - |
 | [shinyAce](http://trestletech.github.io/shinyAce) | trestletech | [shinyAce](https://github.com/trestletech/shinyAce) |
+| [Presentation](https://herimanitra.shinyapps.io/presentation/) | | [Shiny-jQuery-mobile-Dashboard](https://github.com/RanaivosonHerimanitra/Shiny-jQuery-mobile-Dashboard) |
+| [確率分布いろいろ](https://ksmzn.shinyapps.io/statdist/) | ksmzn | [ShinyDistributionsApp](https://github.com/ksmzn/ShinyDistributionsApp) |
