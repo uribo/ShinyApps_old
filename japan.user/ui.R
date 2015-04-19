@@ -12,7 +12,7 @@ dashboardPage(
       menuItem("[WIP]Stats",  tabName = "stats",     icon = icon("bar-chart")),
       menuItem("[WIP]Browse", tabName = "browse",    icon = icon("slideshare")),
       menuItem("About",       tabName = "about",     icon = icon("bullhorn")),
-      menuItem("Source code", icon = icon("github"), href = "https://github.com/uribo/ShinyApps/japan.user")
+      menuItem("Source code", icon = icon("github"), href = "https://github.com/uribo/ShinyApps/tree/master/japan.user")
     )),
   
   dashboardBody(
