@@ -1,6 +1,13 @@
 # Japan.useR app.
 dashboardPage(
-  dashboardHeader(title = "Japan useR"), # community materials
+  dashboardHeader(title = "Japan useR", # あまり長いタイトルだとメニューと被る
+                  dropdownMenu(type = "tasks", badgeStatus = "success",
+                               #######*****#######*****#######*****#######***
+                               taskItem(value = 1,  color = "red", "全体の進捗どうですか"),
+                               taskItem(value = 0, color = "black", "Events"),
+                               taskItem(value = 0, color = "black", "Stats"),
+                               taskItem(value = 0, color = "black", "Browse")
+                               )), 
   
   dashboardSidebar(
     sidebarSearchForm(textId = "searcht.text", 
