@@ -1,7 +1,9 @@
 server <- function(input, output) {
   to_a_tag <- function(links){
-    sapply(links, function(link){
-      ifelse(is.na(link), "", as.character(a(href = link, link)))
+    sapply(links, function(link, target = "_blank"){
+      ifelse(is.na(link), 
+             "", 
+             as.character(a(href = link, target = target, link)))
     })
   }
   dat.community <- reactive({
