@@ -1,7 +1,7 @@
 server <- function(input, output) {
   to_a_tag <- function(links){
     sapply(links, function(link){
-      ifelse(is.na(link), "", as.character(a(href=link, link)))
+      ifelse(is.na(link), "", as.character(a(href = link, link)))
     })
   }
   dat.community <- reactive({
@@ -9,7 +9,7 @@ server <- function(input, output) {
       select(-Number, -Session, -Community, -Topic) %>% 
       filter(
         Title %in% grep(pattern = (input$searcht.text), ignore.case = TRUE, x = Title, value = TRUE) | Speaker %in% grep(pattern = (input$searcht.text), x = Speaker, value = TRUE)) %>%
-        mutate(Slide=to_a_tag(Slide))
+        mutate(Slide = to_a_tag(Slide))
       
     # grep(pattern = ("ggplot2"), x = JRSlide$Title, value = TRUE)
     # filter(JRSlide, Title %in% grep(pattern = "ggplot2", x = Title, value = TRUE)) -> tmp
