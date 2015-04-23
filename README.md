@@ -2,7 +2,8 @@
 
 ## My Apps
 
-* japan.user
+* `Japan useR`: Japanese R Community Material Datasets
+    * [App](http://uribo.shinyapps.io/Japan_useR), [Repo](https://github.com/uribo/ShinyApps/tree/master/japan.user)
 
 ## Useful links
 
