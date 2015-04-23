@@ -22,3 +22,5 @@
 | [shinyAce](http://trestletech.github.io/shinyAce) | trestletech | [shinyAce](https://github.com/trestletech/shinyAce) |
 | [Presentation](https://herimanitra.shinyapps.io/presentation/) | | [Shiny-jQuery-mobile-Dashboard](https://github.com/RanaivosonHerimanitra/Shiny-jQuery-mobile-Dashboard) |
 | [確率分布いろいろ](https://ksmzn.shinyapps.io/statdist/) | ksmzn | [ShinyDistributionsApp](https://github.com/ksmzn/ShinyDistributionsApp) |
+| [ggExtra](http://daattali.com:3838/ggExtra-ggMarginal-demo/) | daattali | [daattali/ggExtra](https://github.com/daattali/ggExtra) as a pkg. |
+| [MovieLens Shiny App](https://justinchu.shinyapps.io/MovieLens-app/) | justinchu | - |
